@@ -1,0 +1,46 @@
+{
+  "name": "sunshinejoy",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/base": "^5.0.0-alpha.112",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.3",
+    "@react-oauth/google": "^0.9.0",
+    "@tanstack/react-query": "^4.20.9",
+    "axios": "^1.5.1",
+    "cors": "^2.8.5",
+    "country-flag-icons": "^1.5.5",
+    "currency-converter-lt": "^2.0.0-beta.0",
+    "framer-motion": "^9.0.2",
+    "moment": "^2.29.4",
+    "polotno": "https://github.com/tickle-29/temp-lib.git",
+    "react": "^18.2.0",
+    "react-accessible-accordion": "^5.0.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.6.1",
+    "swiper": "^8.4.5",
+    "yet-another-react-lightbox": "^2.2.7",
+    "zustand": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.0.0"
+  }
+}
