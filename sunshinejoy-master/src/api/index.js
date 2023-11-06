@@ -5,7 +5,7 @@ let HOSTED_BASE_URL = 'https://sunkissedjoy.com/api/api/'
 let LOCAL_BASE_URL = 'http://localhost:5000/api'
 
 
-export const BASE_SERVER_URL = LOCAL_BASE_URL;
+export const BASE_SERVER_URL = HOSTED_BASE_URL;
 
 const serverInstance = axios.create({
   baseURL: BASE_SERVER_URL,
