@@ -74,7 +74,7 @@ console.log(process.env.NODE_ENV);
 // $ CORS
 app.use(
 	cors({
-		origin: "https://sunkissedjoy.com",
+		origin: "https://sunkissedjoy.netlify.app/",
 		methods: "GET,POST,PUT,DELETE,PATCH",
 		credentials: true,
 	})
