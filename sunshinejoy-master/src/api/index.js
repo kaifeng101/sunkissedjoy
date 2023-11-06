@@ -1,7 +1,7 @@
 import axios from "axios";
 import { APP_AUTH_KEY } from "../hooks/useAuth";
 
-let HOSTED_BASE_URL = 'https://sunkissedjoy.com/api/api/'
+let HOSTED_BASE_URL = 'https://react-backend-9tib.onrender.com//api/'
 let LOCAL_BASE_URL = 'http://localhost:5000/api'
 
 
