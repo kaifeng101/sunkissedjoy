@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding : 0;
+  margin : 0;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+@font-face {
+	font-family: 'SUIT Variable';
+	font-weight: 100 900;
+	src: url('./assets/fonts/SUIT/SUIT-Variable.woff2') format('woff2-variations');
+}
+
+body  {
+  font-family: 'SUIT Variable', 'Poppins', sans-serif;
+}
+
+.text-shadow {
+  text-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.2);
+}
+
+@layer utilities {
+  .max-content-width {
+    max-width: 1600px;
+    @apply mx-auto;
+  }
+}
+
+
+
+
+.polotno-panel-container {
+  max-width: 300px !important;
+}
