@@ -72,21 +72,21 @@ console.log(process.env.NODE_ENV);
 
 
 // $ CORS
-app.use(
-	cors({
-		origin: "https://react-backend-9tib.onrender.com/api/",
-		methods: "GET,POST,PUT,DELETE,PATCH",
-		credentials: true,
-	})
-);
-
 // app.use(
 // 	cors({
-// 		origin: true,
+// 		origin: "https://react-backend-9tib.onrender.com/api/",
 // 		methods: "GET,POST,PUT,DELETE,PATCH",
 // 		credentials: true,
 // 	})
 // );
+
+app.use(
+	cors({
+		origin: true,
+		methods: "GET,POST,PUT,DELETE,PATCH",
+		credentials: true,
+	})
+);
 
 app.use((req, res, next) => {
     if (req.originalUrl === '/pay/webhook') {
