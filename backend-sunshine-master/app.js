@@ -74,7 +74,7 @@ console.log(process.env.NODE_ENV);
 // $ CORS
 app.use(
 	cors({
-		origin: "https://sunkissedjoy.netlify.app/",
+		origin: "https://react-backend-9tib.onrender.com/api/",
 		methods: "GET,POST,PUT,DELETE,PATCH",
 		credentials: true,
 	})
