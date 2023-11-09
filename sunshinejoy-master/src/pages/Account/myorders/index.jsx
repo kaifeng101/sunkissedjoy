@@ -100,6 +100,7 @@ const Orders = () => {
     fetchGifts: { data: giftData, isLoading, error },
   } = useFetchGifts();
   const navigate = useNavigate();
+  
   return (
     <AccountLayout>
       <div className="p-3 font-poppins lg:p-4">
@@ -141,7 +142,7 @@ const Orders = () => {
         ) : giftData?.length === 0 ? (
           <div className="w-full h-[300px] flex items-center justify-center mt-16 flex-col">
             <img src={noDraftSVG} className="w-[60%] object-contain h-full" />
-            <div className="mt-6 text-xl">No Drafts Found!</div>
+            <div className="mt-6 text-xl">No Orders Found!</div>
           </div>
         ) : (
           <div className="mt-6 space-y-3 lg:space-y-6">

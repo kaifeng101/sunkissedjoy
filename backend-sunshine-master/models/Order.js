@@ -82,9 +82,9 @@ const orderSchema = new mongoose.Schema({
 
 
 if (mongoose.models.Order) {
-    delete mongoose.connection.models["Order123"];
+    delete mongoose.connection.models["Order"];
   }
   
-  const Order = mongoose.model("Order123", orderSchema);
+const Order = mongoose.model("Order", orderSchema);
 
 module.exports = Order
