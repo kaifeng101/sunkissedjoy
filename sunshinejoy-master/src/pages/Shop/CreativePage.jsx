@@ -40,7 +40,7 @@ const CreativePage = () => {
       />
       <main className="mt-10 max-sm:mt-36 max-lg:mt-32 max-xs:mt-0  px-24 max-xl:px-10 max-lg:px-7 max-sm:px-3">
         <Stepper activeValue={currentShopStep} />
-        <div className="capture-component max-lg:mt-14 items-start max-md:grid-cols-1 mt-16 grid max-lg:gap-6 grid-cols-2 gap-36 max-xl:gap-16">
+        <div className="capture-component max-lg:mt-14 items-start max-md:grid-cols-1 mt-16 grid max-lg:gap-6 gap-36 max-xl:gap-16">
           <CaptureComponent
             img={DrawMeJoyImg}
             onClick={() => setShowForm(prev=>!prev)}
@@ -48,12 +48,12 @@ const CreativePage = () => {
             title="DRAW ME, JOY!"
             desc="Joy and her artists got their paint brushes ready. Pick a style and they’ll paint you into a whole new world! "
           />
-          <CaptureComponent
+          {/* <CaptureComponent
             img={ComingSoonImg}
             disabled={true}
             title="CREATE MY OWN MINIME CHARACTERS!"
             desc="feeling creative and adventurous for somemore fun? Create your own Minime Characters and have them printed immediately onto your products with no drawing waiting time!"
-          />
+          /> */}
         </div>
         {showForm&&<>
           <div className="mt-28">
