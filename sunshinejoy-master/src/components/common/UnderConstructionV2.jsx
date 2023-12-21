@@ -27,7 +27,7 @@ const UnderConstructionV2 = () => {
           We're Crafting Creativi-tea...
         </div>
         <div className="text-4xl text-center max-lg:text-3xl max-sm:text-2xl font-bold mt-1 text-white">
-          Something Exciting is Brewing on our website!
+          Something Exciting is Brewing!
         </div>
         <div className="mt-12 max-sm:w-full max-sm:px-8">
           <input
@@ -48,16 +48,12 @@ const UnderConstructionV2 = () => {
         </div>
         <div className="font-black text-center">About</div>
         <div className="text-center mt-1">
-          Welcome to SunkissedJoy, <br /> where we believe in capturing moments,
-          celebrating milestones, and conveying heartfelt emotions <br />{" "}
-          through personalised gifting. Our passion for creativity and the
-          desire to spread joy led us to create a platform that allows <br />{" "}
-          you to create unforgettable experiences for your loved ones. With
-          SunkissedJoy, every gift becomes a cherished memory.
+          Welcome to SunkissedJoy, where we believe in capturing moments, celebrating milestones, and conveying heartfelt emotions through personalised gifting. Our passion for creativity and the desire to spread joy led us to create a platform that allows you to create unforgettable experiences for your loved ones. With SunkissedJoy, every gift becomes a cherished memory.
         </div>
         <div className="font-black text-center mt-4">Get in touch</div>
         <div className="text-center mt-1">
-        We can't wait to share the exciting news with you! Something amazing is on its way, and we want you to be the first to know. <br/>  Stay connected with us, and be part of SunkissedJoy
+            Something amazing is on its way, and we want you to be the first to know. <br />
+            Stay connected with us, and be part of SunkissedJoy.
         </div>
         <div className="flex mt-4 text-black items-center gap-5 justify-center">
           <a target="_blank" href="https://www.instagram.com/sunkissed.joy/">
@@ -76,7 +72,7 @@ const UnderConstructionV2 = () => {
           </a>
         </div>
         <div className="mt-6 w-full text-black text-center">
-            Copyright 2023 Sunkissed Joy
+            &copy; Copyright 2023 Sunkissed Joy
         </div>
       </div>
     </div>

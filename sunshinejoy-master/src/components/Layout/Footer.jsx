@@ -38,7 +38,7 @@ const Footer = () => {
         </section>
         <section>
           <div className="text-lg font-semibold max-xs:text-center">We'll keep you on your toes</div>
-          <div className="mt-2 max-xs:mt-1 max-xs:text-center underline">Email@example.com</div>
+          <div className="mt-2 max-xs:mt-1 max-xs:text-center underline">Sunkissedjoy.co@gmail</div>
           <div className="max-xs:flex mt-4  max-xs:justify-center ">
           <Button onClick={()=>setRemindMeModal(true)} className='max-xs:py-[6px] max-xs:mx-auto max-xs:w-fit' primary={true}>Remind Me</Button>
           </div>
@@ -46,11 +46,11 @@ const Footer = () => {
         <section>
           <div className="font-semibold text-lg max-xs:text-center">Join Our Family</div>
           <div className="flex mt-2 items-center gap-5 max-xs:justify-center">
-            <AiOutlineInstagram className="hover:text-primary cursor-pointer" size={30}/>
-            <AiOutlineFacebook className="hover:text-primary cursor-pointer" size={30}/>
-            <FaTiktok className="hover:text-primary cursor-pointer" size={25}/>
+            <a target="_blank" href="https://instagram.com/sunkissed.joy?igshid=MXU2MWUyd2ZhejAyZw=="><AiOutlineInstagram className="hover:text-primary cursor-pointer" size={30} /></a>
+            <a target="_blank" href="https://www.facebook.com/Sunkissedjoy.co?mibextid=LQQJ4d"><AiOutlineFacebook className="hover:text-primary cursor-pointer" size={30} /></a>
+            <a target="_blank" href="https://www.tiktok.com/@sunkissed.joy?_t=8hEgCXt2bsP&_r=1"><FaTiktok className="hover:text-primary cursor-pointer" size={25}/></a>
           </div>
-          <div className="mt-3 text-sm opacity-70 max-xs:text-center">© copyright 2022. Sunshine Joy</div>
+          <div className="mt-3 text-sm opacity-70 max-xs:text-center">© copyright 2022. Sunkissed Joy</div>
         </section>
       </div>
       <div className="flex items-center justify-center mt-12">
