@@ -2,12 +2,28 @@
   {
     "_id": "6319bcb258d0444af0c00e53",
     "images": [
-      "https://res.cloudinary.com/insight-byte/image/upload/v1662630878/Group_54_j8n76s.png"
+      "https://res.cloudinary.com/insight-byte/image/upload/v1662630878/Group_54_j8n76s.png",
+      "https://res.cloudinary.com/insight-byte/image/upload/v1662630878/Group_51_1_nhwpmy.png"
     ],
     "title": "Glass Frames",
     "subTitle": "Class it up with Wood and Glass.",
     "description": "A4 Size Card |  3D Pop Up Features |  1x Personalised Illustration Design |  1x Background Design |  Unlimited Personalised Message |  Free Delivery",
-    "price": "20",
+    "price": {
+      "perPiece": 1,
+      "perPieceDiscounted": 0.80,
+      "per100Pieces": 0.95,
+      "per100PiecesDiscounted": 0.75,
+      "per500Pieces": 0.90,
+      "per500PiecesDiscounted": 0.70,
+      "perAbove500Pieces": 0.85,
+      "perAbove500PiecesDiscounted": 0.60
+    },
+    "leadTime": {
+      "perPiece": 1,
+      "per100Pieces": 9,
+      "per500Pieces": 14,
+      "perAbove500Pieces": 18
+    },
     "note": "Or S$5.63 X3 Monthly Installment. No Interest Fees With SHOPBACK",
     "__v": 0
   },
@@ -19,80 +35,22 @@
     "title": "Light Me Up Lamp",
     "subTitle": "Light up a smile and radiate some joy!",
     "description": "A4 Size Card |  3D Pop Up Features |  1x Personalised Illustration Design |  1x Background Design |  Unlimited Personalised Message |  Free Delivery",
-    "price": "20",
-    "note": "Or S$5.63 X3 Monthly Installment. No Interest Fees With SHOPBACK",
-    "__v": 0
-  },
-  {
-    "_id": "6319bcd258d0444af0c00e55",
-    "images": [
-      "https://res.cloudinary.com/insight-byte/image/upload/v1662630878/Group_51_1_nhwpmy.png"
-    ],
-    "title": "Light Me Up Lamp",
-    "subTitle": "Light up a smile and radiate some joy!",
-    "description": "A4 Size Card |  3D Pop Up Features |  1x Personalised Illustration Design |  1x Background Design |  Unlimited Personalised Message |  Free Delivery",
-    "price": "20",
-    "note": "Or S$5.63 X3 Monthly Installment. No Interest Fees With SHOPBACK",
-    "__v": 0
-  },
-  {
-    "_id": "6319bcd258d0444af0c00e55",
-    "images": [
-      "https://res.cloudinary.com/insight-byte/image/upload/v1662630878/Group_51_1_nhwpmy.png"
-    ],
-    "title": "Light Me Up Lamp",
-    "subTitle": "Light up a smile and radiate some joy!",
-    "description": "A4 Size Card |  3D Pop Up Features |  1x Personalised Illustration Design |  1x Background Design |  Unlimited Personalised Message |  Free Delivery",
-    "price": "20",
-    "note": "Or S$5.63 X3 Monthly Installment. No Interest Fees With SHOPBACK",
-    "__v": 0
-  },
-  {
-    "_id": "6319bcd258d0444af0c00e55",
-    "images": [
-      "https://res.cloudinary.com/insight-byte/image/upload/v1662630878/Group_51_1_nhwpmy.png"
-    ],
-    "title": "Light Me Up Lamp",
-    "subTitle": "Light up a smile and radiate some joy!",
-    "description": "A4 Size Card |  3D Pop Up Features |  1x Personalised Illustration Design |  1x Background Design |  Unlimited Personalised Message |  Free Delivery",
-    "price": "20",
-    "note": "Or S$5.63 X3 Monthly Installment. No Interest Fees With SHOPBACK",
-    "__v": 0
-  },
-  {
-    "_id": "6319bcd258d0444af0c00e55",
-    "images": [
-      "https://res.cloudinary.com/insight-byte/image/upload/v1662630878/Group_51_1_nhwpmy.png"
-    ],
-    "title": "Light Me Up Lamp",
-    "subTitle": "Light up a smile and radiate some joy!",
-    "description": "A4 Size Card |  3D Pop Up Features |  1x Personalised Illustration Design |  1x Background Design |  Unlimited Personalised Message |  Free Delivery",
-    "price": "20",
-    "note": "Or S$5.63 X3 Monthly Installment. No Interest Fees With SHOPBACK",
-    "__v": 0
-  },
-  {
-    "_id": "6319bcd258d0444af0c00e55",
-    "images": [
-      "https://res.cloudinary.com/insight-byte/image/upload/v1662630878/Group_51_1_nhwpmy.png"
-    ],
-    "title": "Light Me Up Lamp",
-    "subTitle": "Light up a smile and radiate some joy!",
-    "description": "A4 Size Card |  3D Pop Up Features |  1x Personalised Illustration Design |  1x Background Design |  Unlimited Personalised Message |  Free Delivery",
-    "price": "20",
-    "note": "Or S$5.63 X3 Monthly Installment. No Interest Fees With SHOPBACK",
-    "__v": 0
-  },
-  {
-    "_id": "6319bcd258d0444af0c00e55",
-    "images": [
-      "https://d2b72aifdvmdso.cloudfront.net/production/images/productOptions/kids/kidstshirt/preview_white_01.jpg?width=540"
-    ],
-    "title": "Light Me Up Lamp",
-    "subTitle": "Light up a smile and radiate some joy!",
-    "description": "A4 Size Card |  3D Pop Up Features |  1x Personalised Illustration Design |  1x Background Design |  Unlimited Personalised Message |  Free Delivery",
-    "price": "20",
-    "originalPrice": "32",
+    "price": {
+      "perPiece": 1,
+      "perPieceDiscounted": 0.80,
+      "per100Pieces": 0.95,
+      "per100PiecesDiscounted": 0.75,
+      "per500Pieces": 0.90,
+      "per500PiecesDiscounted": 0.70,
+      "perAbove500Pieces": 0.85,
+      "perAbove500PiecesDiscounted": 0.60
+    },
+    "leadTime": {
+      "perPiece": 1,
+      "per100Pieces": 9,
+      "per500Pieces": 14,
+      "perAbove500Pieces": 18
+    },
     "note": "Or S$5.63 X3 Monthly Installment. No Interest Fees With SHOPBACK",
     "__v": 0
   }
