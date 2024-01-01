@@ -10,7 +10,7 @@ const StepItem = ({value,activeValue,title,handleClick})=>{
 
 const Stepper = ({activeValue,stepOneClick,stepTwoClick,stepThreeClick}) => {
   return (
-    <div className='my-6 max-sm:gap-2 w-full flex items-center justify-center gap-4'>
+    <div className='my-6 max-sm:gap-2 w-full flex items-center justify-center gap-4 px-0.5'>
         <StepItem handleClick={stepOneClick} value={0} activeValue={activeValue} title='Select your favourite gift'/>
         <ArrowForwardIos sx={{opacity : '0.4'}}/>
         <StepItem handleClick={stepTwoClick} value={1} activeValue={activeValue} title="Let's Get Creative"/>
