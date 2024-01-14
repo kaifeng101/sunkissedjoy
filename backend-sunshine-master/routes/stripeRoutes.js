@@ -83,7 +83,7 @@ app.post(
         const paymentMethod = event.data.object;
         console.log("PaymentMethod was attached to a Customer!");
         break;
-      case "checkout.session.completed":
+      case "checkout.session.async_payment_succeeded":
         const foundOrder = await Order.findOne({
           sessionId: event.data.object.id,
         })
@@ -117,10 +117,6 @@ app.post(
       // ... handle other event types
       case "payment_intent.created":
         console.log("PaymentIntent was created!");
-        // Handle the payment intent created event
-        break;
-      case "checkout.session.async_payment_succeeded":
-        console.log("Checkout session payment succeeded was created!");
         // Handle the payment intent created event
         break;
       default:
