@@ -115,6 +115,14 @@ app.post(
         );
         break;
       // ... handle other event types
+      case "payment_intent.created":
+        console.log("PaymentIntent was created!");
+        // Handle the payment intent created event
+        break;
+      case "checkout.session.async_payment_succeeded":
+        console.log("Checkout session payment succeeded was created!");
+        // Handle the payment intent created event
+        break;
       default:
         console.log(`Unhandled event type ${event.type}`);
     }
