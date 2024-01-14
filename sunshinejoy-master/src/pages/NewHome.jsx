@@ -13,7 +13,7 @@ import ComponentGroup from "../components/common/ComponentGroup";
 import useAppStore from "../hooks/useAppStore";
 import Stepper from "../components/common/Stepper";
 import NewProductGroup from "../components/Shop/NewProductGroup";
-import ProductDetail from "../components/Shop/ProductDetail";
+import ShirtProductDetail from "../components/Shop/ShirtProductDetail";
 import RecommendedProductsGroup from "../components/Shop/RecommendedProductsGroup";
 import { scrollSmoothly } from "../utils/functions/scrollSmoothly";
 // Searchbar functionality
@@ -57,6 +57,16 @@ const NewHome = () => {
 
   const selectLeadTime = (leadTime) => {
     setSelectLeadTime(leadTime);
+  };
+
+  const [showProductDetail, setShowProductDetail] = useState(true);
+  const handleProductDetailClose = () => {
+    setCurrentProduct(null);
+    setShowProductDetail(false);
+  };
+  const handleProductSelection = (product) => {
+    setShowProductDetail(true);
+    setCurrentProduct(product);
   };
 
   return (
@@ -127,11 +137,11 @@ const NewHome = () => {
 
       <Stepper activeValue={currentShopStep} />
 
-      {currentProduct ? (
+      {showProductDetail && currentProduct ? (
           <>
-          <ProductDetail data={currentProduct}/>
+          <ShirtProductDetail data={currentProduct} onClose={handleProductDetailClose} />
           <div className="mt-24">
-            <RecommendedProductsGroup setCurrentProduct={setCurrentProduct} products={productsData?.filter(product=>product?._id !== currentProduct?._id)} />
+            <RecommendedProductsGroup setCurrentProduct={handleProductSelection} products={productsData?.filter(product=>product?._id !== currentProduct?._id)} />
           </div>
           </>
         ) : (
@@ -145,7 +155,7 @@ const NewHome = () => {
               <div className="mt-12">
                 <NewProductGroup
                   products={productsData}
-                  setCurrentProduct={setCurrentProduct}
+                  setCurrentProduct={handleProductSelection}
                   selectedBudget={selectedBudget}
                   selectedQuantity={selectedQuantity}
                   selectedLeadTime={selectedLeadTime}

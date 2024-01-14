@@ -50,6 +50,7 @@ const createOrder = async (req, res) => {
 
 exports.placeOrder = catchAsync(async (req, res) => {
   let savedorder = await createOrder(req, res);
+
   res.json({
     message: "Order placed successfully",
     order: savedorder,

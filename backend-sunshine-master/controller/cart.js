@@ -29,7 +29,7 @@ exports.getCart = catchAsync(async (req, res, next) => {
 
 exports.addItemToCart = catchAsync(async (req, res, next) => {
  const userId = req?.user?._id || req?.body?.userId;
- const { productId, quantity } = req.body;
+ const { productId, quantity, pricePerUnit } = req.body;
 
  const cart = await Cart.findOne({ user: userId });
  const product = await Product.findOne({ _id: productId });
@@ -58,7 +58,7 @@ exports.addItemToCart = catchAsync(async (req, res, next) => {
    });
  }
 
- const price = product.price;
+ const price = pricePerUnit;
  const name = product.title;
  //If cart already exists for user,
  if (cart) {
@@ -89,7 +89,7 @@ exports.addItemToCart = catchAsync(async (req, res, next) => {
        cart: nextCart,
      });
    } else {
-     cart.items.push({ productId, name, quantity, price });
+     cart.items.push({ productId, name, quantity, price, product: productId });
      cart.total = cart.items.reduce((acc, curr) => {
        return acc + curr.quantity * curr.price;
      }, 0);
@@ -98,7 +98,7 @@ exports.addItemToCart = catchAsync(async (req, res, next) => {
      let nextCart = await Cart.findOne({ user: userId }).populate({
        path: "items",
        populate: {
-         path: "productId",
+         path: "product",
          model: "Product",
        },
      });
@@ -108,7 +108,7 @@ exports.addItemToCart = catchAsync(async (req, res, next) => {
    //no cart exists, create ones
    const newCart = await Cart.create({
      user: userId,
-     items: [{ productId, name, quantity, price }],
+     items: [{ productId, name, quantity, price, product: productId }],
      total: quantity * price,
    });
    let nextCart = await Cart.findOne({ user: userId }).populate({

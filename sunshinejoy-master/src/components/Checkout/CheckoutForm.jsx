@@ -155,16 +155,17 @@ const CheckoutForm = ({form,setForm,error}) => {
             helperText={error.address}
           />
         </div>
-        <div className="mt-16 hidden max-md:flex justify-end">
+        {/* <div className="mt-16 hidden max-md:flex justify-end">
           <Button className={'w-full'}>Make my gift!</Button>
-        </div>
+        </div> */}
         <div className="mt-44 max-md:mt-16  max-sm:gap-4 max-xs:gap-3 flex items-center justify-between">
           <MUIButton onClick={()=>setShowCart(true)} sx={{ color: "black", fontSize  : {xs : 12, sm : 16} }} size='small' startIcon={<ArrowBackIos />}>
             Return To Cart
           </MUIButton>
           <Button onClick={()=>{
             setCurrentShopStep(2);
-            navigate('/shop?state=another')
+            // navigate('/shop?state=another')
+            navigate('/newHome')
           }} className="py-[10px] hover:bg-opacity-80">
             Add another {<span className="max-md:hidden">product to cart</span>}
           </Button>

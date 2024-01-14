@@ -69,9 +69,9 @@ const CartAndTotal = ({handleCheckout,fastService,isLoading}) => {
         <div className="text-xl font-semibold">Total</div>
         <div className="text-3xl font-bold max-md:text-2xl max-sm:text-xl">{f(p((cart?.total + 3.54+(fastService?10:0))))}</div>
       </div>
-      <div className="mt-72 max-md:hidden"></div>
-      <div className="mt-44 pt-4 flex absolute right-5 bottom-5 justify-end max-md:hidden">
-        <Button disabled={isLoading} onClick={handleCheckout}>{isLoading?'Loading..':'Make my gift!'}</Button>
+      <div className="mt-10"></div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Button style={{ width: "100%"}} disabled={isLoading} onClick={handleCheckout}>{isLoading?'Loading..':'Checkout'}</Button>
       </div>
     </div>
   );

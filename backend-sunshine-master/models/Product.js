@@ -25,7 +25,9 @@ const productSchema = new mongoose.Schema({
     price : priceSchema,
     leadTime: leadTimeSchema,
     note : String,
-    images : [String]
+    images : [String],
+    material: String,
+    sizeGuide: String
 });
 
 

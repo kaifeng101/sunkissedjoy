@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
-import { deleteCartAPI, getCartAPI, updateCartAPI } from "../api/cart.api";
+import { addItemToCartAPI, deleteCartAPI, getCartAPI, updateCartAPI } from "../api/cart.api";
 import useAppStore from "./useAppStore";
 import useAuth from "./useAuth";
 
@@ -67,6 +67,24 @@ const useCart = (props={})=>{
         },
     });
 
+    const { mutate: addItemToCart, data: addedItemData, isLoading: isAddItemLoading, error: addItemError } = useMutation(
+        addItemToCartAPI,
+        {
+          onSuccess: (data) => {
+            let currentData = queryClient.getQueryData(["cart"]);
+            queryClient.setQueryData(["cart"], {
+              ...currentData,
+              cart: data.cart,
+            });
+            // You can perform additional actions after adding an item to the cart
+          },
+          onError: (error) => {
+            toast.error(error?.response?.data?.message || "Failed to add item to the cart!");
+            // You can handle the error or perform additional actions
+          },
+        }
+      );
+      
     const {mutate : deleteCart, data : deleteCartData,isLoading : isDeleteCartLoading, error : deleteCartError } = useMutation(deleteCartAPI, {
         onSuccess : (data)=>{
             queryClient.setQueryData(['cart'],null);
@@ -90,6 +108,7 @@ const useCart = (props={})=>{
         updateCartError,
         setClientState,
         updateCart,
+        addItemToCart,
         setClientState,
         items : cart?.items || [],
         total : cart?.total || 0,
