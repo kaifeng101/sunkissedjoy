@@ -58,6 +58,10 @@ app.post(
   async (req, res) => {
     const sig = req.headers["stripe-signature"];
 
+    console.log("Raw Request Body:", req.body.toString());
+    console.log("Signature:", sig);
+
+
     let event;
     console.log("Webhook received:", event);
 
