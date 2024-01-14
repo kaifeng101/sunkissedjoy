@@ -112,6 +112,10 @@ app.post(
         );
         break;
       // ... handle other event types
+      case "payment_intent.created":
+        console.log("PaymentIntent was created!");
+        // Handle the payment intent created event
+        break;
       default:
         console.log(`Unhandled event type ${event.type}`);
     }
