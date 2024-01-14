@@ -58,20 +58,8 @@ app.post(
   async (req, res) => {
     const sig = req.headers["stripe-signature"];
 
-    console.log("Raw Request Body:", req.body.toString());
-    console.log("Signature:", sig);
-
-
     let event;
-    console.log("Webhook received:", event);
-
-    if (!event) {
-      console.log("Event is undefined or null");
-      return res.status(400).send("Bad Request");
-    }
-
-    // Proceed with handling the event
-    console.log("Event type:", event.type);
+    console.log("Webhook received:", req.body.toString());
 
     try {
       event = stripe.webhooks.constructEvent(req.body, sig, webhookSecret);
@@ -81,6 +69,9 @@ app.post(
       return res.status(400).send(`Webhook Error: ${err.message}`);
     }
 
+    // Log the entire event object
+    console.log("Event:", JSON.stringify(event, null, 2));
+    
     // Successfully constructed event
     console.log("✅ Success:", event.id);
     // switch (event.type) {
