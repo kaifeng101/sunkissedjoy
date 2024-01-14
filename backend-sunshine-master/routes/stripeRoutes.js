@@ -71,54 +71,58 @@ app.post(
 
     // Successfully constructed event
     console.log("✅ Success:", event.id);
-    switch (event.type) {
-      case "payment_intent.succeeded":
-        const paymentIntent = event.data.object;
-        console.log("PaymentIntent was successful!");
-        break;
-      case "payment_method.attached":
-        const paymentMethod = event.data.object;
-        console.log("PaymentMethod was attached to a Customer!");
-        break;
-      case "checkout.session.completed":
-        const foundOrder = await Order.findOne({
-          sessionId: event.data.object.id,
-        })
-          .populate({
-            path: "items",
-            populate: {
-              path: "product",
-              model: "Product",
-            },
-          })
-          .populate("drawingStyle");
-        if (!foundOrder) {
-          return res
-            .status(404)
-            .json({ message: "Error while placing the order" });
-        }
-        foundOrder.isPayment = true;
-        const updateResult = await foundOrder.save();
-        console.log(updateResult);
-        console.log("DONEE");
-        await Cart.findOneAndDelete({
-          user: foundOrder.user,
-        });
-        let template = getAdminInvoiceTempate(foundOrder);
-        sendEmail(
-          process.env.ADMIN_EMAIL,
-          template,
-          "You have recieved a new Order"
-        );
-        break;
-      // ... handle other event types
-      case "payment_intent.created":
-        console.log("PaymentIntent was created!");
-        // Handle the payment intent created event
-        break;
-      default:
-        console.log(`Unhandled event type ${event.type}`);
-    }
+    // switch (event.type) {
+    //   case "payment_intent.succeeded":
+    //     const paymentIntent = event.data.object;
+    //     console.log("PaymentIntent was successful!");
+    //     break;
+    //   case "payment_method.attached":
+    //     const paymentMethod = event.data.object;
+    //     console.log("PaymentMethod was attached to a Customer!");
+    //     break;
+    //   case "checkout.session.completed":
+    //     const foundOrder = await Order.findOne({
+    //       sessionId: event.data.object.id,
+    //     })
+    //       .populate({
+    //         path: "items",
+    //         populate: {
+    //           path: "product",
+    //           model: "Product",
+    //         },
+    //       })
+    //       .populate("drawingStyle");
+    //     if (!foundOrder) {
+    //       return res
+    //         .status(404)
+    //         .json({ message: "Error while placing the order" });
+    //     }
+    //     foundOrder.isPayment = true;
+    //     const updateResult = await foundOrder.save();
+    //     console.log(updateResult);
+    //     console.log("DONEE");
+    //     await Cart.findOneAndDelete({
+    //       user: foundOrder.user,
+    //     });
+    //     let template = getAdminInvoiceTempate(foundOrder);
+    //     sendEmail(
+    //       process.env.ADMIN_EMAIL,
+    //       template,
+    //       "You have recieved a new Order"
+    //     );
+    //     break;
+    //   // ... handle other event types
+    //   case "payment_intent.created":
+    //     console.log("PaymentIntent was created!");
+    //     // Handle the payment intent created event
+    //     break;
+    //   case "checkout.session.async_payment_succeeded":
+    //     console.log("Checkout session payment succeeded was created!");
+    //     // Handle the payment intent created event
+    //     break;
+    //   default:
+    //     console.log(`Unhandled event type ${event.type}`);
+    // }
 
     // Return a response to acknowledge receipt of the event
     res.json({ received: true });
