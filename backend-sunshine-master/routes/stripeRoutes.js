@@ -59,7 +59,15 @@ app.post(
     const sig = req.headers["stripe-signature"];
 
     let event;
-    console.log("Webhook received:", event.type);
+    console.log("Webhook received:", event);
+
+    if (!event) {
+      console.log("Event is undefined or null");
+      return res.status(400).send("Bad Request");
+    }
+
+    // Proceed with handling the event
+    console.log("Event type:", event.type);
 
     try {
       event = stripe.webhooks.constructEvent(req.body, sig, webhookSecret);
